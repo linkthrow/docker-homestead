@@ -1,0 +1,16 @@
+front:
+  image: linkthrow/docker-nginx
+  ports:
+    - "80:80"
+  links:
+    - phpfpm:phpfpm
+    - supervisor:supervisor
+
+phpfpm:
+  image: linkthrow/php-fpm-5-6
+
+supervisor:
+  image: linkthrow/docker-supervisor
+
+
+
